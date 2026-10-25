@@ -1,24 +1,66 @@
-import logo from './logo.svg';
-import './App.css';
+
+import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
+
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import { LanguageProvider } from "./components/LanguageContext";
+
+import Accueil from "./pages/Accueil";
+import APropos from "./pages/APropos";
+import Parcours from "./pages/Parcours";
+import Competences from "./pages/Competences";
+import Projets from "./pages/Projets";
+import Experiences from "./pages/Experiences";
+import Certifications from "./pages/Certifications";
+import Contact from "./pages/Contact";
+
+import "./App.css";
+
+function Layout() {
+  return (
+    <div className="App">
+      <Navbar />
+
+      <main className="main-content">
+        <Outlet />
+      </main>
+
+      <Footer />
+    </div>
+  );
+}
+
+function NotFound() {
+  return (
+    <section className="not-found">
+      <p className="not-found-code">404</p>
+      <h1>Page introuvable</h1>
+      <p>La page que vous recherchez n'existe pas.</p>
+      <a href="/">Retour à l'accueil</a>
+    </section>
+  );
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <LanguageProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route element={<Layout />}>
+            <Route path="/" element={<Accueil />} />
+            <Route path="/a-propos" element={<APropos />} />
+            <Route path="/parcours" element={<Parcours />} />
+            <Route path="/competences" element={<Competences />} />
+            <Route path="/projets" element={<Projets />} />
+            <Route path="/experiences" element={<Experiences />} />
+            <Route path="/certifications" element={<Certifications />} />
+            <Route path="/contact" element={<Contact />} />
+
+            <Route path="*" element={<NotFound />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </LanguageProvider>
   );
 }
 
