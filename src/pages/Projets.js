@@ -16,14 +16,12 @@ import {
   Search,
   Workflow,
   FileSearch,
-  Network,
   HeartPulse,
   Eye,
   Car,
   Flower2,
   Mail,
   Users,
-  Stethoscope,
   X,
 } from "lucide-react";
 import { Link } from "react-router-dom";

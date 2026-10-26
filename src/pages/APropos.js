@@ -16,18 +16,13 @@ import {
   Briefcase,
   Award,
   Users,
-  Globe,
   BookOpen,
   Music,
-  Heart,
+  Camera,
   Compass,
-  CheckCircle2,
-  Calendar,
-  Building2,
   Languages as LanguagesIcon,
   TrendingUp,
   Coffee,
-  Camera,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import "./APropos.css";
@@ -111,72 +106,6 @@ const stats = [
   { value: "3", label: "Expériences professionnelles", icon: Briefcase },
   { value: "20+", label: "Technologies maîtrisées", icon: Code2 },
   { value: "2", label: "Formations diplômantes", icon: GraduationCap },
-];
-
-const timeline = [
-  {
-    year: "2024 — Aujourd'hui",
-    title: "Ingénieure Data & Business Intelligence",
-    company: "Projets personnels & missions",
-    description:
-      "Conception de tableaux de bord Power BI, développement de pipelines ETL, mise en place de solutions d'analyse et exploration de modèles d'IA appliqués à la data.",
-    tags: ["Power BI", "Python", "SQL", "IA"],
-    icon: Briefcase,
-  },
-  {
-    year: "2023 — 2024",
-    title: "Stage — Data Analyst / BI",
-    company: "Entreprise spécialisée en Data",
-    description:
-      "Analyse de données métier, création de dashboards interactifs, rédaction de rapports analytiques et automatisation de traitements récurrents.",
-    tags: ["Power BI", "DAX", "Power Query"],
-    icon: BarChart3,
-  },
-  {
-    year: "2022 — 2023",
-    title: "Projet de fin d'études — Data Science",
-    company: "École d'ingénieurs",
-    description:
-      "Développement d'une solution complète de collecte, nettoyage, modélisation et visualisation de données, intégrant un modèle de machine learning.",
-    tags: ["Python", "Machine Learning", "Flask"],
-    icon: BrainCircuit,
-  },
-  {
-    year: "2019 — 2024",
-    title: "Diplôme d'ingénieur en informatique",
-    company: "Spécialisation BI & Big Data",
-    description:
-      "Formation solide en développement logiciel, bases de données, Business Intelligence et Big Data, avec projets académiques pratiques.",
-    tags: ["BI", "Big Data", "Développement"],
-    icon: GraduationCap,
-  },
-];
-
-const techStack = [
-  {
-    category: "Business Intelligence",
-    icon: BarChart3,
-    color: "#f39bd5",
-    items: ["Power BI", "DAX", "Power Query", "Tableau", "Excel Avancé"],
-  },
-  {
-    category: "Data & Big Data",
-    icon: Database,
-    color: "#a88aff",
-    items: ["SQL", "Python", "Pandas", "NumPy", "Talend", "MongoDB"],
-  },
-  {
-    category: "IA & Machine Learning",
-    icon: BrainCircuit,
-    color: "#78dfff",
-    items: ["Scikit-learn", "TensorFlow", "LLM", "OpenAI API", "Hugging Face"],
-  },
-  {
-    category: "Développement",
-    icon: Code2,
-    color: "#c6a4ff",
-    items: ["React", "Flask", "Java", "JavaScript", "HTML / CSS", "Git"],
-  },
 ];
 
 const languages = [
@@ -438,7 +367,7 @@ const APropos = () => {
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.6, delay: 0.15 }}
             >
-              <div className="about-quote-mark">“</div>
+              <div className="about-quote-mark">"</div>
 
               <blockquote>
                 Les données prennent toute leur valeur
@@ -469,8 +398,6 @@ const APropos = () => {
           </div>
         </div>
       </section>
-
-      
 
       {/* =====================================================
           EXPERTISE

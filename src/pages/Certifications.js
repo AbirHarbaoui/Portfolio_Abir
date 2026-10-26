@@ -13,7 +13,6 @@ import {
   Network,
   ShieldCheck,
   Sparkles,
-  Trophy,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import "./Certifications.css";

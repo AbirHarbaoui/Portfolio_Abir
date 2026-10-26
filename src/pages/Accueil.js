@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -19,9 +18,7 @@ import {
   GraduationCap,
   MapPin,
   ExternalLink,
-  Globe,
   Users,
-  Languages,
   Award,
   Activity,
   Cpu,
@@ -320,12 +317,6 @@ const portfolioEducation = [
       "Formation en développement logiciel, systèmes d'information et bases de données.",
     color: "#76D8CE",
   },
-];
-
-const portfolioLanguages = [
-  { name: "Arabe", subtitle: "العربية", symbol: "ع" },
-  { name: "Français", subtitle: "Communication en français", symbol: "FR" },
-  { name: "Anglais", subtitle: "English", symbol: "EN" },
 ];
 
 const portfolioOrganizations = [
@@ -1205,4 +1196,3 @@ export default function Accueil() {
     </main>
   );
 }
-
